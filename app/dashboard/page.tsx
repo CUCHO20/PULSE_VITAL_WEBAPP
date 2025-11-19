@@ -1,7 +1,8 @@
 import { redirect } from 'next/navigation';
 import { createClient } from "@/lib/server";
+import { Dashboard } from "@/components/dashboard";
 
-export default async function Home() {
+export default async function DashboardPage() {
   const supabase = await createClient();
   const {
     data: { user },
@@ -11,14 +12,15 @@ export default async function Home() {
     redirect("/auth/login");
   }
 
-  const { data: profile, error } = await supabase
+  const { data: profile } = await supabase
     .from("profiles")
     .select("*")
-    .eq("id", user.id);
+    .eq("id", user.id)
+    .single();
 
-  if (!profile || profile.length === 0 || !profile[0]?.onboarding_completed) {
+  if (!profile?.onboarding_completed) {
     redirect("/dashboard/onboarding");
   }
 
-  redirect("/dashboard");
+  return <Dashboard user={user} profile={profile} />;
 }
