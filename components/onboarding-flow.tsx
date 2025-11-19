@@ -5,16 +5,16 @@ import { useRouter } from 'next/navigation'
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, ArrowRight } from 'lucide-react'
 import { createClient } from "@/lib/client"
-import { SleepLevelStep } from "./onboarding-steps/sleep-level-step"
-import { EmotionStep } from "./onboarding-steps/emotion-step"
-import { EatingHabitsStep } from "./onboarding-steps/eating-habits-step"
-import { MedicationsStep } from "./onboarding-steps/medications-step"
-import { SymptomsStep } from "./onboarding-steps/symptoms-step"
-import { HealthGoalStep } from "./onboarding-steps/health-goal-step"
-import { GenderStep } from "./onboarding-steps/gender-step"
-import { WeightStep } from "./onboarding-steps/weight-step"
-import { AgeStep } from "./onboarding-steps/age-step"
-import { BloodTypeStep } from "./onboarding-steps/blood-type-step"
+import { SleepLevelStep } from "./sleep-level-step"
+import { EmotionStep } from "./emotion-step"
+import { EatingHabitsStep } from "./eating-habits-step"
+import { MedicationsStep } from "./medications-step"
+import { SymptomsStep } from "./symptoms-step"
+import { HealthGoalStep } from "./health-goal-step"
+import { GenderStep } from "./gender-step"
+import { WeightStep } from "./weight-step"
+import { AgeStep } from "./age-step"
+import { BloodTypeStep } from "./blood-type-step"
 
 interface OnboardingFlowProps {
   user: any

@@ -85,7 +85,7 @@ export function WeightStep({ data, updateData }: WeightStepProps) {
             max={unit === "lbs" ? 300 : 150}
             value={weight}
             onChange={(e) => handleWeightChange(Number.parseInt(e.target.value))}
-            orient="vertical"
+            aria-orientation="vertical"
             className="absolute left-1/2 -translate-x-1/2 h-full w-2 bg-gradient-to-b from-blue-200 via-blue-400 to-blue-600 rounded-full appearance-none cursor-pointer [writing-mode:bt-lr] [-webkit-appearance:slider-vertical] [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-8 [&::-webkit-slider-thumb]:h-8 [&::-webkit-slider-thumb]:rounded-xl [&::-webkit-slider-thumb]:bg-blue-600 [&::-webkit-slider-thumb]:shadow-lg [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:border-4 [&::-webkit-slider-thumb]:border-white"
           />
 
